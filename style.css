@@ -80,7 +80,7 @@ body {
 
     background:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("images/darkcity.jpg") center/cover no-repeat;
+        url("darkcity.jpg") center/cover no-repeat;
 
     display: flex;
     justify-content: center;
@@ -105,7 +105,7 @@ body {
     /* Nền sáng hơn */
     background:
         linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
-        url("images/darkcity1.jpg") center/cover no-repeat;
+        url("darkcity1.jpg") center/cover no-repeat;
 
     text-align: center;
     color: white;
@@ -169,7 +169,7 @@ body {
 .parallax {
     background:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("images/darkcity2.jpg") center/cover fixed no-repeat;
+        url("darkcity2.jpg") center/cover fixed no-repeat;
 }
 
 /* ======================
@@ -183,7 +183,7 @@ body {
 
     background:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url("images/darkcity2.jpg") center/cover no-repeat;
+        url("darkcity2.jpg") center/cover no-repeat;
 }
 .content {
     width: 400px;
@@ -294,7 +294,7 @@ body {
     color: white;
     background:
         linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
-        url("images/darkcity4.jpg") center/cover no-repeat;
+        url("darkcity4.jpg") center/cover no-repeat;
 }
 
 .about-content {
