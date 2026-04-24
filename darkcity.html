@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DARK CITY</title>
+
+        <link rel="icon" href="images/favicon.png" />
+        <link rel="stylesheet" href="style.css" />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <a href="login.html">CLICK TEST</a>
+
+        <!-- NAVBAR -->
+        <header class="navbar">
+            <div class="logo">DARK CITY <span>闇の都市</span></div>
+
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="login.html">STORY</a>
+                <a href="login.html">SYSTEM</a>
+                <a href="login.html">GALLERY</a>
+                <a href="login.html" class="play-btn">今すぐプレイ</a>
+            </nav>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero"></section>
+
+        <section class="parallax"></section>
+
+        <!-- WHY -->
+        <section class="why">
+            <h2>なぜ、DARK CITYが選ばれるのか？</h2>
+
+            <div class="features">
+                <div class="card reveal">
+                    <div class="icon">⚔️</div>
+                    <h3>ダークバトルシステム</h3>
+                    <p>リアルタイム戦闘で敵を倒し、生き残れ。</p>
+                </div>
+
+                <div class="card reveal">
+                    <div class="icon">🌃</div>
+                    <h3>オープンワールド都市</h3>
+                    <p>崩壊した未来都市を自由に探索できる。</p>
+                </div>
+
+                <div class="card reveal">
+                    <div class="icon">🧬</div>
+                    <h3>キャラクター進化</h3>
+                    <p>能力を強化し、自分だけの戦闘スタイルを作れ。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about">
+            <div class="about-content">
+                <h2>ダークシティへようこそ</h2>
+
+                <p>
+                    DARK CITY は、崩壊した未来都市を舞台にした
+                    オープンワールドアクションゲーム。
+                    プレイヤーは自由に探索し、戦い、生き残りながら
+                    自分だけの物語を作り上げていく。
+                </p>
+                <a href="login.html" class="about-btn">冒険を始める</a>
+            </div>
+        </section>
+        <script>
+            const reveals = document.querySelectorAll(".reveal");
+
+            function reveal() {
+                const trigger = window.innerHeight * 0.8;
+
+                reveals.forEach((el) => {
+                    const top = el.getBoundingClientRect().top;
+
+                    if (top < trigger) {
+                        el.classList.add("show");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", reveal);
+            window.addEventListener("load", reveal);
+        </script>
+    </body>
+</html>
