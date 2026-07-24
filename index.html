@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DARK CITY</title>
+
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <a href="login.html">CLICK TEST</a>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="logo">DARK CITY <span>闇の都市</span></div>
+
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="#story">STORY</a>
+        <a href="#system">SYSTEM</a>
+        <a href="#gallery">GALLERY</a>
+        <a href="login.html" class="play-btn">今すぐプレイ</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero"></section>
+
+    <section class="parallax"></section>
+
+    <!-- WHY -->
+    <section class="why">
+      <h2>なぜ、DARK CITYが選ばれるのか？</h2>
+
+      <div class="features">
+        <div class="card reveal">
+          <div class="icon">⚔️</div>
+          <h3>ダークバトルシステム</h3>
+          <p>リアルタイム戦闘で敵を倒し、生き残れ。</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="icon">🌃</div>
+          <h3>オープンワールド都市</h3>
+          <p>崩壊した未来都市を自由に探索できる。</p>
+        </div>
+
+        <div class="card reveal">
+          <div class="icon">🧬</div>
+          <h3>キャラクター進化</h3>
+          <p>能力を強化し、自分だけの戦闘スタイルを作れ。</p>
+        </div>
+      </div>
+    </section>
+    <section id="story" class="story">
+      <section class="character-section">
+        <div class="character-system">
+          <h2>キャラクター紹介</h2>
+          <div class="character-grid">
+            <!-- CHARACTER 1 -->
+            <div class="char-card" onclick="flipCard(this)">
+              >
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="character/sword.jpg" />
+                  <span>ゼロ</span>
+                </div>
+
+                <div class="card-back">
+                  <h3>ゼロ</h3>
+                  <p>
+                    漆黒の刀を振るう放浪の剣士。
+                    素早く鋭い剣技で敵を切り裂き、“闇を断つ者”として恐れられている。
+                    彼が追い求めるのは、滅びた世界に隠された真実だけだった。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- CHARACTER 2 -->
+            <div class="char-card" onclick="flipCard(this)">
+              >
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="character/mage.jpg" />
+                  <span>アヤネ</span>
+                </div>
+
+                <div class="card-back">
+                  <h3>アヤネ</h3>
+                  <p>
+                    禁断の魔術を操る謎多き魔導士。
+                    青白い炎と共に現れ、その力は都市の法則すら書き換えると言われている。
+                    誰にも心を開かず、静かに闇を見つめ続けている。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- CHARACTER 3 -->
+            <div class="char-card" onclick="flipCard(this)">
+              >
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="character/lance.jpg" />
+                  <span>レイ・カズマ</span>
+                </div>
+
+                <div class="card-back">
+                  <h3>レイ・カズマ</h3>
+                  <p>
+                    雷のような速度で槍を突き出す最前線の騎士。
+                    どんな絶望の戦場でも仲間を守り抜くことを誓っている。
+                    都市の人々は彼を“鋼鉄の守護者”と呼ぶ。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- CHARACTER 4 -->
+            <div class="char-card" onclick="flipCard(this)">
+              >
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="character/gun.jpg" />
+                  <span>ネオン</span>
+                </div>
+
+                <div class="card-back">
+                  <h3>ネオン</h3>
+                  <p>
+                    二丁拳銃を操る冷酷なガンナー。
+                    狙った標的を一瞬で仕留めることから、“黒い流星”の異名を持つ。
+                    その美しい微笑みの裏には、危険な狂気が隠されている。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- CHARACTER 5 -->
+            <div class="char-card" onclick="flipCard(this)">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="character/broadsword.jpg" />
+                  <span>カイト</span>
+                </div>
+
+                <div class="card-back">
+                  <h3>カイト</h3>
+                  <p>
+                    巨大な大剣を振るう孤独な戦士。
+                    圧倒的な力で敵を叩き潰し、“鉄血の処刑人”として恐れられている。
+                    戦い以外に生き方を知らず、今日も闇の都市を彷徨い続ける。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- CHARACTER 6 -->
+            <div class="char-card" onclick="flipCard(this)">
+              >
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="character/healer.jpg" />
+                  <span>ルナ</span>
+                </div>
+
+                <div class="card-back">
+                  <h3>ルナ</h3>
+                  <p>
+                    崩壊した都市で傷ついた者たちを救い続ける治癒術師。
+                    彼女の光は絶望に染まった世界で、最後の希望と呼ばれている。
+                    しかし、その優しさの奥には誰にも語らない悲しい過去が眠っている。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- CHARACTER 7 -->
+            <div class="char-card" onclick="flipCard(this)">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="character/assassin.jpg" />
+                  <span>レイヴン</span>
+                </div>
+
+                <div class="card-back">
+                  <h3>レイヴン</h3>
+                  <p>
+                    闇の中から音もなく現れる最凶の暗殺者。
+                    標的に気付かれる頃には、すでに全てが終わっていると言われている。
+                    感情を捨て、ただ任務だけのために生きる“黒き死神”。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- CHARACTER 8 -->
+            <div class="char-card" onclick="flipCard(this)">
+              >
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="character/summoner.jpg" />
+                  <span>ノクス</span>
+                </div>
+
+                <div class="card-back">
+                  <h3>ノクス</h3>
+                  <p>
+                    異界の魔物を呼び出す危険な召喚術師。
+                    彼女が奏でる呪文は、闇の扉を開き、無数の怪物を呼び覚ます。
+                    妖しく微笑むその姿に、多くの者が恐怖した。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- CHARACTER 9 -->
+            <div class="char-card" onclick="flipCard(this)">
+              >
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="character/shield.jpg" />
+                  <span>タイタン</span>
+                </div>
+
+                <div class="card-back">
+                  <h3>ノヴァ</h3>
+                  <p>
+                    巨大な盾で仲間を守る重装防衛兵。
+                    どれほど激しい攻撃でも一歩も退かず、“鋼鉄の城壁”と呼ばれている。
+                    その背中は、絶望の戦場で最後の希望となる。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- CHARACTER 10 -->
+            <div class="char-card" onclick="flipCard(this)">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="character/spirit.jpg" />
+                  <span>ミラ</span>
+                </div>
+
+                <div class="card-back">
+                  <h3>ミラ</h3>
+                  <p>
+                    精霊と心を繋ぐ神秘の精神術師。
+                    静かな歌声と共に現れる精霊たちは、敵の魂さえも揺さぶると言われている。
+                    月明かりの下で踊る彼女の姿は、美しくも幻想的だった。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="about-content">
+        <h2>ダークシティへようこそ</h2>
+
+        <p>
+          DARK CITY は、崩壊した未来都市を舞台にした
+          オープンワールドアクションゲーム。
+          プレイヤーは自由に探索し、戦い、生き残りながら
+          自分だけの物語を作り上げていく。
+        </p>
+        <a href="login.html" class="about-btn">冒険を始める</a>
+      </div>
+    </section>
+    <script>
+      const reveals = document.querySelectorAll(".reveal");
+
+      function reveal() {
+        const trigger = window.innerHeight * 0.8;
+
+        reveals.forEach((el) => {
+          const top = el.getBoundingClientRect().top;
+
+          if (top < trigger) {
+            el.classList.add("show");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", reveal);
+      window.addEventListener("load", reveal);
+      function openChar(id) {
+        document.getElementById("charPopup").style.display = "flex";
+        document.getElementById("charName").innerText = characters[id].name;
+        document.getElementById("charStory").innerText = characters[id].story;
+      }
+
+      function closeChar() {
+        document.getElementById("charPopup").style.display = "none";
+      }
+    </script>
+    <!-- CHARACTER POPUP -->
+    <div id="charPopup" class="char-popup">
+      <div class="popup-content">
+        <span onclick="closeChar()">✕</span>
+        <h2 id="charName"></h2>
+        <p id="charStory"></p>
+      </div>
+    </div>
+    <section id="system" class="system"></section>
+    <section id="gallery" class="gallery"></section>
+    <script>
+      function flipCard(card) {
+        card.classList.toggle("flip");
+      }
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".char-card")) {
+          document
+            .querySelectorAll(".char-card")
+            .forEach((c) => c.classList.remove("flip"));
+        }
+      });
+    </script>
+  </body>
+</html>

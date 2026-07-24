@@ -1,0 +1,552 @@
+@import url("sanitize.css");
+
+/* ======================
+   RESET
+====================== */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans JP", sans-serif;
+    scroll-behavior: smooth;
+    background: black;
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ======================
+   NAVBAR
+====================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(12px);
+
+    z-index: 999;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: red;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #00eaff;
+}
+
+.play-btn {
+    background: red;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.play-btn:hover {
+    background: white;
+    color: black;
+    box-shadow: 0 0 20px red;
+}
+
+/* ======================
+   HERO
+====================== */
+
+.hero {
+    height: 100vh;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.75)),
+        url("images/darkcity.jpg") center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ======================
+   PARALLAX
+====================== */
+
+.parallax {
+    height: 40vh;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
+        url("images/darkcity2.jpg") center/cover no-repeat;
+}
+
+/* ======================
+   WHY SECTION
+====================== */
+
+.why {
+    padding: 100px 10%;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.9)),
+        url("images/darkcity1.jpg") center/cover no-repeat;
+
+    text-align: center;
+}
+
+.why h2 {
+    font-size: 45px;
+    margin-bottom: 60px;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 320px;
+    padding: 40px 30px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+}
+
+.card .icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.card p {
+    opacity: 0.8;
+    line-height: 1.7;
+}
+
+/* ======================
+   REVEAL
+====================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ======================
+   STORY SECTION
+====================== */
+
+.story {
+    padding: 0;
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.92)),
+        url("images/darkcity3.jpg") center/cover no-repeat;
+}
+
+.character-section {
+    padding: 80px 40px;
+}
+
+.character-system {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.character-system h2 {
+    font-size: 50px;
+    margin-bottom: 50px;
+    letter-spacing: 4px;
+}
+
+/* ======================
+   CHARACTER GRID
+====================== */
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 28px;
+}
+
+/* ======================
+   CHARACTER CARD
+====================== */
+
+.char-card {
+    position: relative;
+    height: 500px;
+
+    perspective: 1200px;
+    cursor: pointer;
+
+    transition: 0.4s;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.char-card.flip .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    inset: 0;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    backface-visibility: hidden;
+}
+
+/* FRONT */
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.card-front::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.92)
+    );
+}
+
+.card-front span {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    z-index: 2;
+}
+
+/* BACK */
+
+.card-back {
+    background: rgba(0, 0, 0, 0.96);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 35px;
+
+    text-align: center;
+
+    transform: rotateY(180deg);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card-back h3 {
+    font-size: 28px;
+    color: cyan;
+    margin-bottom: 20px;
+}
+
+.card-back p {
+    line-height: 1.9;
+    opacity: 0.85;
+}
+
+/* HOVER */
+
+.char-card:hover {
+    transform: translateY(-10px);
+}
+
+.char-card:hover .card-front img {
+    transform: scale(1.08);
+}
+
+/* ======================
+   ABOUT
+====================== */
+
+.about {
+    padding: 120px 10%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.92)),
+        url("images/darkcity4.jpg") center/cover no-repeat;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 2;
+    opacity: 0.85;
+}
+
+.about-btn {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 35px;
+
+    border: 2px solid cyan;
+    border-radius: 10px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 20px cyan;
+}
+
+/* ======================
+   LOGIN
+====================== */
+
+.login-bg {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url("images/darkcity2.jpg") center/cover no-repeat;
+}
+
+.content {
+    width: 420px;
+    padding: 45px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+
+    animation: fadeIn 1s ease;
+}
+
+.content h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.content label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.content input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+
+    background: transparent;
+    color: white;
+
+    border: none;
+    border-bottom: 2px solid cyan;
+}
+
+.content button {
+    width: 100%;
+    padding: 14px;
+
+    border: 2px solid cyan;
+    background: transparent;
+    color: white;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.content button:hover {
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 20px cyan;
+}
+
+/* ======================
+   BACK BUTTON
+====================== */
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    padding: 10px 25px;
+
+    border-radius: 30px;
+    border: 2px solid red;
+
+    color: white;
+    text-decoration: none;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: red;
+    box-shadow: 0 0 20px red;
+}
+
+/* ======================
+   ANIMATION
+====================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+
+@media (max-width: 1400px) {
+    .character-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1100px) {
+    .character-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .why h2,
+    .about h2,
+    .character-system h2 {
+        font-size: 36px;
+    }
+
+    .character-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .char-card {
+        height: 420px;
+    }
+}
+
+@media (max-width: 520px) {
+    .character-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .char-card {
+        height: 500px;
+    }
+}
